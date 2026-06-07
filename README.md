@@ -2,7 +2,7 @@
   <img src="img1.JPG" alt="Crop Disease Detection" width="200"/>
 </p>
 
-<h1 align="center">🌿 Crop Disease Detection using IoT</h1>
+<h1 align="center">Crop Disease Detection using IoT</h1>
 
 <p align="center">
   <strong>An end-to-end IoT pipeline for real-time crop disease identification using Deep Learning, Raspberry Pi, and Android</strong>
@@ -19,7 +19,7 @@
 
 ---
 
-## 📖 Overview
+## Overview
 
 This project implements a complete **smart agriculture** solution that captures images of plant leaves using a Raspberry Pi equipped with a PiCamera, classifies the leaf disease using a Convolutional Neural Network (CNN), and relays results to an Android application through the **ThingSpeak** cloud platform.
 
@@ -27,18 +27,18 @@ The system enables farmers to quickly identify crop diseases in real-time, recei
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🔬 **Deep Learning Classifier** — Custom CNN trained on the [PlantVillage dataset](https://www.kaggle.com/emmarex/plantdisease) to identify **15 disease classes** across 3 crop types
-- 🍅 **Multi-Crop Support** — Detects diseases in **Tomato**, **Bell Pepper**, and **Potato** plants
-- 📷 **IoT Image Capture** — Uses a Raspberry Pi with PiCamera for automated leaf image capture
-- ☁️ **Cloud Integration** — Leverages ThingSpeak (HTTP & MQTT) for seamless IoT-to-mobile communication
-- 📱 **Android Companion App** — Displays the captured leaf image, diagnosed disease, preventive measures, and cures
-- 🔄 **Remote Trigger** — Send capture commands from the Android app to the Raspberry Pi over TCP
+- **Deep Learning Classifier** — Custom CNN trained on the [PlantVillage dataset](https://www.kaggle.com/emmarex/plantdisease) to identify **15 disease classes** across 3 crop types
+- **Multi-Crop Support** — Detects diseases in **Tomato**, **Bell Pepper**, and **Potato** plants
+- **IoT Image Capture** — Uses a Raspberry Pi with PiCamera for automated leaf image capture
+- **Cloud Integration** — Leverages ThingSpeak (HTTP & MQTT) for seamless IoT-to-mobile communication
+- **Android Companion App** — Displays the captured leaf image, diagnosed disease, preventive measures, and cures
+- **Remote Trigger** — Send capture commands from the Android app to the Raspberry Pi over TCP
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────┐       ┌──────────────────┐       ┌──────────────────┐
@@ -56,7 +56,7 @@ The system enables farmers to quickly identify crop diseases in real-time, recei
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 The classifier uses a custom **Sequential CNN** built with Keras, designed for efficient inference on edge devices:
 
@@ -88,7 +88,7 @@ The classifier uses a custom **Sequential CNN** built with Keras, designed for e
 
 ---
 
-## 🦠 Supported Disease Classes
+## Supported Disease Classes
 
 The model can identify the following **15 classes**:
 
@@ -112,19 +112,19 @@ The model can identify the following **15 classes**:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 CropDiseaseDetection/
-├── 📓 Plant_disease.ipynb     # Jupyter notebook — model training pipeline
-├── 🐍 code.py                 # Standalone inference script
-├── 🧠 my_model.h5             # Pre-trained Keras model (HDF5 format)
-├── 🖼️ img1.JPG                # Sample leaf image for testing
-├── 🖼️ img2.JPG                # Sample leaf image for testing
-├── 🖼️ img3.JPG                # Sample leaf image for testing
-├── 📄 README.md               # This file
+├── Plant_disease.ipynb     # Jupyter notebook — model training pipeline
+├── code.py                 # Standalone inference script
+├── my_model.h5             # Pre-trained Keras model (HDF5 format)
+├── img1.JPG                # Sample leaf image for testing
+├── img2.JPG                # Sample leaf image for testing
+├── img3.JPG                # Sample leaf image for testing
+├── README.md               # This file
 │
-└── 📱 Crop_Disease/            # Android companion app
+└── Crop_Disease/            # Android companion app
     ├── build.gradle            # Root Gradle build config
     ├── settings.gradle
     ├── gradlew / gradlew.bat   # Gradle wrapper scripts
@@ -141,7 +141,7 @@ CropDiseaseDetection/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -209,16 +209,16 @@ The model is deployed on a **Raspberry Pi** using **TensorFlow Lite**. The devic
 
 ### Step 3 — Mobile Visualization
 The **Android app** subscribes to the ThingSpeak channel using a **publish-subscribe model** (MQTT). It displays:
-- 📷 The captured leaf image
-- 🏷️ The predicted disease class
-- 🛡️ Preventive measures
-- 💊 Cure recommendations
+- The captured leaf image
+- The predicted disease class
+- Preventive measures
+- Cure recommendations
 
 The app can also send a **TCP command** back to the Raspberry Pi to trigger a new image capture.
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 - **Source:** [PlantVillage Dataset on Kaggle](https://www.kaggle.com/emmarex/plantdisease)
 - **Subset Used:** Tomato, Bell Pepper, Potato
@@ -229,7 +229,7 @@ The app can also send a **TCP command** back to the Raspberry Pi to trigger a ne
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -244,7 +244,7 @@ The app can also send a **TCP command** back to the Raspberry Pi to trigger a ne
 
 ---
 
-## 📋 Dependencies
+## Dependencies
 
 ### Python
 ```
@@ -266,32 +266,14 @@ implementation 'com.squareup.okhttp3:okhttp:3.9.1'
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Here's how you can help:
 
-1. 🍴 Fork the repository
-2. 🌿 Create a feature branch (`git checkout -b feature/your-feature`)
-3. 💾 Commit your changes (`git commit -m 'Add your feature'`)
-4. 🚀 Push to the branch (`git push origin feature/your-feature`)
-5. 📬 Open a Pull Request
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add your feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
 
 ---
-
-## 📄 License
-
-This project is open source and available for educational and research purposes.
-
----
-
-## 🙏 Acknowledgements
-
-- [PlantVillage Dataset](https://www.kaggle.com/emmarex/plantdisease) for providing the crop disease image data
-- [ThingSpeak](https://thingspeak.com/) by MathWorks for IoT cloud services
-- [TensorFlow](https://www.tensorflow.org/) and [Keras](https://keras.io/) for the deep learning framework
-
----
-
-<p align="center">
-  Made with ❤️ for Smart Agriculture
-</p>
